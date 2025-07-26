@@ -23,7 +23,7 @@
     </div>
 
     <!-- Navbar -->
-   <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
         <div class="container-fluid">
             <!-- Logo -->
             <a class="navbar-brand d-flex align-items-center" href="../index.html">
@@ -108,7 +108,7 @@
                         <div class="card shadow-sm mb-4" data-aos="fade-up">
                             <div class="row g-0">
                                 <div class="col-md-5 position-relative">
-                                    <img src="../images/Trident-hotel"
+                                    <img src="../images/Trident-hotel" onclick="changeCity('Trident')"
                                         class="img-fluid h-100 w-100 object-fit-cover rounded-start"
                                         alt="Trident Nariman Point Mumbai">
                                     <span class="badge bg-orange text-white position-absolute top-0 start-0 m-2">Top
@@ -144,7 +144,7 @@
                         <div class="card shadow-sm mb-4" data-aos="fade-up">
                             <div class="row g-0">
                                 <div class="col-md-5">
-                                    <img src="../images/Le Méridien Pune-hotel.jpg"
+                                    <img src="../images/Le Méridien Pune-hotel.jpg" onclick="changeCity('lemeridian')"
                                         class="img-fluid h-100 w-100 object-fit-cover rounded-start"
                                         alt="Le Méridien Pune">
                                 </div>
@@ -176,7 +176,7 @@
                         <div class="card shadow-sm mb-4" data-aos="fade-up">
                             <div class="row g-0">
                                 <div class="col-md-5">
-                                    <img src="../images/The Taj Mahal Palace-hotel.jpg"
+                                    <img src="../images/The Taj Mahal Palace-hotel.jpg" onclick="changeCity('taj')"
                                         class="img-fluid h-100 w-100 object-fit-cover rounded-start"
                                         alt="The Taj Mahal Palace Mumbai">
                                 </div>
@@ -208,6 +208,7 @@
                             <div class="row g-0">
                                 <div class="col-md-5">
                                     <img src="../images/MTDC MAHABALESHWAR-STANDARD HOTELS-4.jpg"
+                                        onclick="changeCity('mtdc_satara')"
                                         class="img-fluid h-100 w-100 object-fit-cover rounded-start"
                                         alt="MTDC Resort Mahabaleshwar">
                                 </div>
@@ -244,7 +245,7 @@
                 <div class="col-lg-5" data-aos="fade-up">
                     <div class="position-sticky" style="top: 20px; height: 90vh;">
                         <div class="rounded shadow overflow-hidden h-100">
-                            <iframe
+                            <iframe id="map"
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6205952.071095604!2d70.86138501383607!3d19.576893169388306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf8cd42b2a43%3A0x76f015f88cd15a0f!2sMaharashtra!5e0!3m2!1sen!2sin!4v1721892039054!5m2!1sen!2sin"
                                 width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade">
@@ -811,7 +812,30 @@
                 const loader = document.getElementById("loader");
                 loader.style.opacity = "0";
                 setTimeout(() => loader.style.display = "none", 500);
+                initMap();
             }, 1000);
         });
     </script>
+    <script>
+        const cityCoordinates = {
+            Trident: { lat: 18.928051453627333, lng: 72.820964550126437 },
+            lemeridian: { lat: 18.531007141002924, lng: 73.87397106143767 },
+            taj: { lat: 18.921866063735674, lng: 72.83319206546915 },
+            mtdc_satara: { lat: 17.882875534918373, lng: 73.73375716358973 }
+        };
+
+        function initMap() {
+            // Set default city (Trident hotel) on load
+            changeCity("Trident");
+        }
+
+        function changeCity(city) {
+            const iframe = document.getElementById("map");
+            if (cityCoordinates[city]) {
+                const { lat, lng } = cityCoordinates[city];
+                iframe.src = `https://www.google.com/maps?q=${lat},${lng}&z=12&output=embed`;
+            }
+        }
+    </script>
+
 </body>
