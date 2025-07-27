@@ -1,19 +1,24 @@
 .pagination .page-link {
-  color: #0a0501; /* Orange text */
+  color: #0a0501;
+  /* Orange text */
   border-color: #171514;
   background-color: transparent;
 }
 
 .pagination .page-item.active .page-link {
-  background-color: #f36a08; /* Orange background */
+  background-color: #e76e18;
+  /* Orange background */
   border-color: #0d0c0b;
   color: #fff;
+  /* White text for contrast */
 }
 
 .pagination .page-link:hover {
-  background-color: #ff8533; /* Lighter orange on hover */
+  background-color: #ff8533;
+  /* Lighter orange on hover */
   color: #fff;
 }
+
 /* WhatsApp Button Styles */
 .whatsapp-button {
   position: fixed;

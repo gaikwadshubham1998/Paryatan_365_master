@@ -89,19 +89,26 @@
 .founder-section {
   background-color: #fff;
 }
+
 .founder-section img {
   border-radius: 20px;
   max-height: 450px;
   object-fit: cover;
 }
+
 blockquote {
   border-left: 5px solid #e24c00;
   padding-left: 1rem;
   color: #444;
 }
-.Sg{
-    color: #e24c00;
+
+.Sg {
+  color: #e24c00;
 }
+
+
+
+
 /* WhatsApp Button Styles  */
 .whatsapp-button {
   position: fixed;
@@ -120,6 +127,8 @@ blockquote {
 .whatsapp-button:hover {
   transform: scale(1.1);
 }
+
+
 /* Bounce Animation */
 @keyframes bounce {
 
