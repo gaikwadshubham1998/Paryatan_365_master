@@ -128,6 +128,26 @@ blockquote {
   transform: scale(1.1);
 }
 
+.blinking-star {
+  animation: blink 1.5s infinite;
+  display: inline-block;
+  color: #f5e912;
+  /* orange shade to match your theme */
+  font-size: 1.1em;
+  margin-right: 6px;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+}
 
 /* Bounce Animation */
 @keyframes bounce {
