@@ -27,6 +27,16 @@ body {
   font-weight: 600;
 }
 
+.login-card img {
+  width: 100px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.login-card img:hover {
+  transform: scale(1.1);
+}
+
 .form-label {
   font-weight: 500;
   color: #333;
