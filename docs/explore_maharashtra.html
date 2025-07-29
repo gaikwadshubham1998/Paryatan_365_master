@@ -402,4 +402,10 @@
       once: false, // Animation occurs only once
     });
   </script>
+  <!-- right click disable -->
+  <script>
+    document.addEventListener('contextmenu', function (event) {
+      event.preventDefault();
+    });
+  </script>
 </body>
