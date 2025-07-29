@@ -613,45 +613,68 @@
         </div>
         <!-- End of .container -->
     </section>
-
-
-
-
-
     <!-- Booking Modal -->
     <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content booking-modal rounded-4">
-                <div class="modal-header border-0">
-                    <h5 class="modal-title text-dark fw-bold" id="bookingModalLabel">Book Tour Package</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content booking-modal border-0 shadow-lg rounded-4">
+                <div class="modal-header bg-gradient-orange text-white rounded-top-4 px-4">
+                    <h5 class="modal-title fw-bold" id="bookingModalLabel">
+                        🧳 Book Your Tour Package
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+
+                <div class="modal-body bg-light px-4 py-4">
                     <form id="bookingForm">
+                        <!-- Package Name -->
                         <div class="mb-3">
-                            <label for="packageName" class="form-label fw-semibold">Package</label>
-                            <input type="text" class="form-control" id="packageName" readonly>
+                            <label for="packageName" class="form-label fw-semibold text-dark">Package</label>
+                            <input type="text" class="form-control form-field" id="packageName" readonly />
                         </div>
+
+                        <!-- User Name -->
                         <div class="mb-3">
-                            <label for="userName" class="form-label fw-semibold">Your Name</label>
-                            <input type="text" class="form-control" id="userName" placeholder="Enter your name"
-                                required>
+                            <label for="userName" class="form-label fw-semibold text-dark">Your Name</label>
+                            <input type="text" class="form-control form-field" id="userName"
+                                placeholder="Enter your full name" required />
                         </div>
+
+                        <!-- Email -->
                         <div class="mb-3">
-                            <label for="userEmail" class="form-label fw-semibold">Email address</label>
-                            <input type="email" class="form-control" id="userEmail" placeholder="name@example.com"
-                                required>
+                            <label for="userEmail" class="form-label fw-semibold text-dark">Email Address</label>
+                            <input type="email" class="form-control form-field" id="userEmail"
+                                placeholder="you@example.com" required />
                         </div>
+
+                        <!-- Travel Date -->
                         <div class="mb-3">
-                            <label for="travelDate" class="form-label fw-semibold">Travel Date</label>
-                            <input type="date" class="form-control" id="travelDate" required>
+                            <label for="travelDate" class="form-label fw-semibold text-dark">Preferred Travel
+                                Date</label>
+                            <input type="date" class="form-control form-field" id="travelDate" required />
                         </div>
-                        <button type="submit" class="btn w-100 rounded-pill booking-btn">Confirm Booking</button>
+
+                        <!-- Confirm Button -->
+                        <div class="d-grid mt-4">
+                            <button type="submit" class="btn btn-orange rounded-pill fw-bold py-2 shadow-lg">
+                                Confirm Booking
+                            </button>
+                        </div>
                     </form>
                 </div>
+
+                <div class="modal-footer border-0 bg-light rounded-bottom-4 justify-content-center">
+                    <small class="text-muted text-center">
+                        ✉️ We’ll reach out to you via email within 24 hours.
+                    </small>
+                </div>
+
             </div>
         </div>
     </div>
+
+
+
 
 
 
