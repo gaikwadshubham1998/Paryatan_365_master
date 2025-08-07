@@ -1,14 +1,16 @@
 .tour-card img {
-      height: 200px;
-      object-fit: cover;
-    }
-    .tour-card .btn-outline-danger {
-      border-width: 2px;
-    }
+  height: 200px;
+  object-fit: cover;
+}
 
-    /* Add this to your style.css */
+.tour-card .btn-outline-danger {
+  border-width: 2px;
+}
+
+/* Add this to your style.css */
 .bg-orange {
-  background-color: #ff6b00 !important; /* Choose your desired orange shade */
+  background-color: #ff6b00 !important;
+  /* Choose your desired orange shade */
   color: white;
 }
 
@@ -33,6 +35,7 @@
 .btn-outline-orange:focus {
   box-shadow: 0 0 0 0.25rem rgba(255, 107, 0, 0.5);
 }
+
 /* WhatsApp Button Styles */
 .whatsapp-button {
   position: fixed;
